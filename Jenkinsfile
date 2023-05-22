@@ -14,6 +14,7 @@ pipeline{
       stage('build') {
         steps {
           script {
+            sh 'whoami'
             app =docker.build("underwater")
             }
           }
