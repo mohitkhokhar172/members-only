@@ -27,6 +27,8 @@ pipeline{
        stage('deploy') {
          steps {
            script {
+              sh 'rm  ~/.dockercfg || true'
+              sh 'rm ~/.docker/config.json || true'
              docker.withRegistry('877594857616.dkr.ecr.us-east-1.amazonaws.com/sample', 'aws_credentials'){
                app.push("${env.BUILD_NUMBER}")
              app.push("latest")
