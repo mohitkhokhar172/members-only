@@ -1,7 +1,7 @@
 pipeline{
   agent any
     options {
-       skipStageAfterUnstable()
+       skipStagesAfterUnstable()
        }
     stages {
       stage('clone repo') {
