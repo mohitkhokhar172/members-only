@@ -21,7 +21,7 @@ pipeline{
         } 
        stage('test'){
          steps {
-           scho 'empty'
+           echo 'empty'
            }
          }
        stage('deploy') {
